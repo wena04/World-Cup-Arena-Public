@@ -5,9 +5,12 @@
 # HTTP client for the Stair AI arena proxies (Sportmonks, Polymarket, Supabase).
 requests>=2.32,<3
 
+# Load API keys from a local .env file (not committed to git).
+python-dotenv>=1.0,<2
+
 # Anthropic SDK. The notebook uses extended thinking (the `thinking=` parameter)
 # and the Claude Haiku 4.5 model, both of which require a recent SDK.
-anthropic>=0.40,<1
+# anthropic>=0.40,<1
 
 # To run the notebook itself:
 jupyter>=1.0
@@ -16,4 +19,4 @@ jupyter>=1.0
 # The notebook uses Anthropic by default. Install only the one you plan to use,
 # then follow the "uncomment" instructions in the Setup and LLM cells.
 # google-genai>=1.0     # Google Gemini
-# openai>=1.0           # OpenAI  (also used for DeepSeek via base_url override)
+openai>=1.0           # OpenAI  (also used for DeepSeek via base_url override)
